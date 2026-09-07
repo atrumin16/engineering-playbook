@@ -1,0 +1,24 @@
+# Environment & Secrets (Never commit credentials)
+.env
+.env.*
+*.pem
+*.key
+*.token
+*.secret
+
+# Operating System & Cache
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node & Build artifacts (if tools added)
+node_modules/
+dist/
+build/
+*.log
