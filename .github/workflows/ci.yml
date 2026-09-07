@@ -1,0 +1,22 @@
+name: CI Verification
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    name: Markdown & Structure Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Documentation Files
+        run: |
+          test -f README.md
+          test -f LICENSE
+          test -f SECURITY.md
+          echo "Documentation verification passed."
